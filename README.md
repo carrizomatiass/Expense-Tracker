@@ -9,7 +9,7 @@ Etc.
 
 #Me
 
-Esta app la hice, justamente para practicar sobre el uso del componente SyncFusion y mi ingles!. Ya que me gustaron muchos los dashboards que tiene y las cosas maravillosas que se pueden hacer. Tambien es mi primera app en la escribo 100% en ingles. Traduciendo cada parte del codigo como escribiendo lo practicado.
+Esta app la hice, justamente para practicar sobre el uso del componente SyncFusion y mi ingles!. Ya que me gustaron muchos los dashboards que tiene y las cosas maravillosas que se pueden hacer. Tambien es mi primera app en la que escribo 100% en ingles. Traduciendo cada parte del codigo como escribiendo lo practicado.
 By Matias Carrizo
 Aqui es donde encontre SyncFusion
 https://www.youtube.com/watch?v=Fe1sCEqGHFc
