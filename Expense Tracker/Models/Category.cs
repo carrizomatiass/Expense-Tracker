@@ -6,22 +6,25 @@ namespace Expense_Tracker.Models
     public class Category
     {
         [Key]
-        public int CategoryID { get; set; }
-        [Column(TypeName ="nvarchar(50)")]
-        [Required(ErrorMessage ="Title is required.")]
-        public string CategoryTitle { get; set; }
+        public int CategoryId { get; set; }
+
+        [Column(TypeName = "nvarchar(50)")]
+        [Required(ErrorMessage = "Title is required.")]
+        public string Title { get; set; }
+
         [Column(TypeName = "nvarchar(5)")]
-        public string CategoryIcon { get; set; } = "";
+        public string Icon { get; set; } = "";
+
         [Column(TypeName = "nvarchar(10)")]
-        public string CategoryType { get; set; } = "Expense";
+        public string Type { get; set; } = "Expense";
+
         [NotMapped]
-        public string? TittleWithIcon
+        public string? TitleWithIcon
         {
             get
             {
-                return this.CategoryIcon + " " + this.CategoryTitle;
+                return this.Icon + " " + this.Title;
             }
         }
-
     }
 }

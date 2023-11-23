@@ -6,33 +6,37 @@ namespace Expense_Tracker.Models
     public class Transaction
     {
         [Key]
-        public int TransactionID { get; set; }
-        [Range (1,int.MaxValue,ErrorMessage ="Plase select a category")]
-        public int CategoryID { get; set; }
-        public Category Category { get; set; }
-        [Range (1,int.MaxValue,ErrorMessage ="Amount should be greater than 0.")]
-        public int TransactionAmount { get; set; }
-        [Column (TypeName = "nvarchar(75)")]
-        public string? TransactionNote { get; set; }
-        public DateTime TransactionDate { get; set; } = DateTime.Now;
+        public int TransactionId { get; set; }
+
+        [Range(1,int.MaxValue,ErrorMessage ="Please select a category.")]
+        public int CategoryId { get; set; }
+        public Category? Category { get; set; }
+
+        [Range(1, int.MaxValue, ErrorMessage = "Amount should be greater than 0.")]
+        public int Amount { get; set; }
+
+        [Column(TypeName = "nvarchar(75)")]
+        public string? Note { get; set; }
+
+        public DateTime Date { get; set; } = DateTime.Now;
+
         [NotMapped]
-        public string ? CategoryTitleWithIcon
+        public string? CategoryTitleWithIcon
         {
             get
             {
-                return Category == null ? "" : Category.CategoryIcon + " " + Category.CategoryTitle;
+                return Category == null ? "" : Category.Icon + " " + Category.Title;
             }
         }
+
         [NotMapped]
         public string? FormattedAmount
         {
             get
             {
-                return ((Category == null || Category.CategoryType == "Expense") ? "- " : "+ " + TransactionAmount.ToString("N2"));
+                return ((Category == null || Category.Type == "Expense") ? "- " : "+ ") + Amount.ToString("C0");
             }
         }
-
-        
 
     }
 }
